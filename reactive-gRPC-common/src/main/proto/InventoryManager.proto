@@ -1,0 +1,12 @@
+syntax = "proto3";
+option java_package = "com.reactive.grpc";
+option java_outer_classname = "InventoryManagerProto";
+
+import "Inventory.proto";
+import "InventoryRequest.proto";
+
+service InventoryManagerService {
+
+  rpc saveInventory(Inventory) returns (Inventory);
+  rpc findInventoryById(InventoryRequest) returns (Inventory);
+}
