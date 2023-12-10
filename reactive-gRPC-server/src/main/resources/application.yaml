@@ -3,3 +3,11 @@ grpc:
     port: 8000
 
 server.port: 8080
+
+spring:
+  application.name: reactive-gRPC-Server
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          key-value: classpath:rsa-public.key
